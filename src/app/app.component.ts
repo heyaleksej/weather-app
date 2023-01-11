@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import { ModalComponent } from './components/modal/modal.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'calendar-app';
+  title = 'Calendar app';
+  constructor(private dialog: MatDialog) {}
+
+  openModal() {
+    this.dialog.open(ModalComponent, {
+      minWidth: 'fit-content',
+    });
+  }
 }

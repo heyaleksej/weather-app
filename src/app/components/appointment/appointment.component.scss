@@ -1,0 +1,60 @@
+.appointment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  background-color: #b3bbb9;
+  box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
+  cursor: move;
+  transition: transform 350ms cubic-bezier(0, 0, 0.2, 1);
+
+
+  & > p {
+    display: flex;
+    justify-content: space-evenly;
+    flex-grow: 1;
+    gap: 1rem;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    & > span {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      text-overflow: ellipsis;
+
+      &:last-of-type {
+        width: 50%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  width: 20%;
+  gap: 0.2rem;
+  justify-content: start;
+  overflow: hidden;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+@media screen and (max-width: 500px){
+  .buttons{display: block}
+}
+
+.cdk-drop-list-dragging .cdk-drag {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Animate an item that has been dropped. */
+.cdk-drag-animating {
+  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1);
+}

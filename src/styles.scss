@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+html,
+body {
+  box-sizing: border-box;
+  height: 100vh;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+body {
+  margin: 0;
+  padding: 0 10%;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.router-outlet {
+  display: none;
+}
