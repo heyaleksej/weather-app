@@ -5,8 +5,8 @@ import { IAppointment } from 'src/types/appointment.interface';
 
 export class AppointmentService {
   appointments$ = new BehaviorSubject<IAppointment[]>([
-    { id: 0, date: new Date(Date.now()), title: 'F2F Alexey' },
-    { id: 1, date: new Date(Date.now()), title: 'offer Alexey' },
+    { id: 0, date: new Date(Date.now()), title: 'Morning standup' },
+    { id: 1, date: new Date(Date.now()), title: 'offer Jonhy' },
   ]);
 
   addAppointment(appointment: IAppointment): void {
