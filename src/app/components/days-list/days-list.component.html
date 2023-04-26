@@ -7,6 +7,7 @@
     class="hours__hour"
     cdkDropList
     [cdkDropListData]="i"
+    style="min-height: 70px; width: 100%;"
   >
     {{ hour | date : "H:00" }}
     <div *ngFor="let appointment of appointmentsForDate">
